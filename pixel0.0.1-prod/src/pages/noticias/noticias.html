@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-navbar color="pixel">
+
+    <ion-buttons>
+    <button ion-button menuToggle  (click)="mostrarpaginan()">
+    <ion-icon name="menu"></ion-icon>
+      Posts
+    </button>
+    </ion-buttons>
+  
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="card-background-page">
+  <ion-card *ngFor="let post of _cast.imagenes">
+    <img [src]="post.img"/>
+    <ion-card-content> <div class="card-title">{{post.titulo}}</div>
+   <div class="card-subtitle">.....</div></ion-card-content>
+   <ion-row><ion-col text-right>
+     <button ion-button outline (click)="compartir(post)">Compartir
+    </button></ion-col></ion-row>
+  </ion-card>
+  <ion-fab top right edge>
+    
+  </ion-fab>
+<ion-infinite-scroll (ionInfinite)="siguiente($event)" [enabled]="haymas">
+   <ion-infinite-scroll-content></ion-infinite-scroll-content>
+ </ion-infinite-scroll>
+ 
+</ion-content>

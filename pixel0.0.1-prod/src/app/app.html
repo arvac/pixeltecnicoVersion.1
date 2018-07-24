@@ -1,0 +1,56 @@
+<ion-menu [content]="content" id="menu-avatar">
+    <ion-header>
+      <ion-toolbar>
+        <ion-title>Menu</ion-title>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content>
+   
+      <ion-list>
+    <ion-item>
+      <ion-avatar item-left>
+        <img src="assets/img/pixel4.jpg">
+      </ion-avatar>
+      <h2>Inicio</h2>
+      <p>Posteos y datos empresariales</p>
+      <button ion-button clear item-right icon-only (click)="abrirpagina(tabs)">   
+      <i >continuar </i></button>
+    </ion-item>
+      <ion-item>
+      <ion-avatar item-left>
+      
+      <img src="assets/img/background-1.jpg">
+      </ion-avatar>
+      <button menuClose ion-item (click)="abrirpagina(ajustes)" >
+      Catálogo
+      </button>
+    </ion-item>
+    
+   </ion-list>
+  
+       <ion-list>
+        <ion-list-header>
+         Información 
+        </ion-list-header>
+        <button menuClose ion-item (click)="abrirpagina(ajustes2)" >
+         <ion-avatar item-left>
+           <img src="assets/img/pixel5.jpg">
+         </ion-avatar>
+         Sobre Nosotros
+        </button>
+     
+      </ion-list>
+  
+       <ion-list>
+   
+         <button menuClose ion-item  (click)="salir()" >
+         <ion-avatar item-left>
+          <ion-icon ios="ios-power" md="md-power"></ion-icon><s></s>
+         </ion-avatar>
+         Salir
+        </button>
+      </ion-list>
+    </ion-content>
+  </ion-menu>
+  
+  <ion-nav [root]="rootPage" #content></ion-nav>

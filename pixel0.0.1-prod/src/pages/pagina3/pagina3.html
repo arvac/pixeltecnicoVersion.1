@@ -1,0 +1,60 @@
+
+<ion-header>
+  
+    <ion-navbar>
+     
+      <ion-buttons><button ion-button color="secondary" (click)="cerrar_modal()">cerrar</button></ion-buttons>
+      <ion-title>{{titulo | placeholder:"creaarrr" }}</ion-title>
+    </ion-navbar>
+     <ion-buttons end>
+  
+        <button ion-button
+                [disabled]=" img.length < 2 || titulo.length < 2 "
+                (click)="crear_post()">
+          Crear post
+        </button>
+  
+      </ion-buttons>
+  
+    
+  </ion-header>
+   
+       <ion-buttons end>
+  
+        <button ion-button
+                [disabled]=" img.length < 2 || titulo.length < 2 "
+                (click)="crear_post()">
+          Crear post
+        </button>
+  
+      </ion-buttons>
+  
+  <ion-content padding>
+  <ion-list>
+  
+    <ion-item>
+      <ion-label fixed>nombre del archivo</ion-label>
+      <ion-input type="text" [(ngModel)]="titulo"></ion-input>
+    </ion-item>
+  
+   
+    <ion-item *ngIf="fotos"><img [src]="fotos">
+    </ion-item>
+    <ion-grid>
+    <ion-row>
+      <ion-col>
+          <button  ion-button block icon-left (click)="seleccionarfotos()" >
+          <ion-icon name ="photos"> Seleccionar</ion-icon>
+          </button>
+        </ion-col>
+        <ion-col>
+        <button  ion-button block icon-left (click)="mostrar_camera()" >
+        <ion-icon name ="photos">Camara</ion-icon>
+        </button>
+      </ion-col>
+    </ion-row>
+    
+    </ion-grid>
+  </ion-list>
+  </ion-content>
+  

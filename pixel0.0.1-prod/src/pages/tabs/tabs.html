@@ -1,0 +1,84 @@
+
+<ion-content class="background"  *ngIf="!_auth.authenticated">
+  <ion-content #myContent class="home">
+    <ul class="bg-bubbles">
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+	</ul>
+
+  
+    <h2 class="pixel">Pixel</h2> 
+    <p id='p'>Servicio técnico en celulares</p>
+
+  <ion-card>
+    <ion-card-header>
+    </ion-card-header>
+    <ion-card-content>
+     
+ 
+      <ion-row>
+     
+        <button ion-button icon-left block>
+        <ion-icon name="logo-facebook"></ion-icon>
+       <button ion-button
+              *ngIf="!_auth.authenticated"
+              (click)="ingresar()">
+        Ingresar con Facebook
+      </button>
+      </button>
+     
+        <ion-col>
+         
+        </ion-col>
+      </ion-row>
+      <b>O</b>
+ 
+        <ion-item>
+        <p>No tienes una cuenta ? <a (click)="presentLoading()" >Ingresa aqui </a></p>
+        </ion-item>
+  
+  
+    </ion-card-content>
+  </ion-card>
+  </ion-content>
+</ion-content>
+
+
+<ion-content  *ngIf="_auth.authenticated" >
+ <!-- <ion-card *ngIf="userData">
+    <ion-card-header>{{ userData.username }}</ion-card-header>
+    <img [src]="userData.picture" />
+    <ion-card-content>
+      <p>Email: {{ userData.email }}</p>
+      <p>First Name: {{ userData.first_name }}</p>
+    </ion-card-content>
+  </ion-card>
+-->
+ 
+<ion-tabs color="pixel" selectedIndex="0">
+
+  <ion-tab tabIcon="logo-buffer" tabTitle="Bienvenido" [root]="tab2"></ion-tab>
+  <ion-tab tabIcon="ios-list-box" tabTitle="New Post" [root]="tab3"></ion-tab>
+   <ion-tab tabIcon="ios-cart" tabTitle="Promociones" [root]="tab1"></ion-tab>
+  
+  
+ 
+ 
+</ion-tabs>
+
+</ion-content>
+
+
+
+
+
+
+

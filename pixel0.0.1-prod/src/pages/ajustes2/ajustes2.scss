@@ -1,0 +1,42 @@
+page-ajustes2 {
+    .content{
+      background-color: #e5e5e5;
+    }
+      ion-card {
+    
+        margin-top: 400px;
+        overflow: visible;
+    
+        ion-card-content {
+    
+          background-color: map-get($colors, primary);
+          color: #153718;
+          text-align: center;
+          padding-bottom: 28px;
+    
+          img {
+            height: 160px;
+            width: 160px;
+            border-radius: 50%;
+            margin-top: -100px;
+            border: solid 4px #153718;
+            display: inline;
+          }
+    
+          h2 {
+            font-size: 55.5rem;
+            margin-top: .5rem;
+            color: white;
+          }
+    
+          h3 {
+            font-size: 1.8rem;
+            color: white;
+          }
+    
+        }
+    
+      }
+      
+    }
+    

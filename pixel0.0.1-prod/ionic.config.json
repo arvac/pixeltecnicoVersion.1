@@ -1,0 +1,8 @@
+{
+  "name": "pixel0.0.1",
+  "app_id": "31fa6d2b",
+  "type": "ionic-angular",
+  "integrations": {
+    "cordova": {}
+  }
+}
